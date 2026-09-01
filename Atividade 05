@@ -1,0 +1,46 @@
+import 'dart:io';
+
+class House {
+  int id;
+  String name;
+  double price;
+
+  // Construtor utilizando this
+  House(this.id, this.name, this.price);
+}
+
+void main() {
+  List<House> casas = [];
+
+  for (int i = 0; i < 3; i++) {
+    print("\nCadastro da casa ${i + 1}");
+
+    print("Digite o ID:");
+    int id = int.parse(stdin.readLineSync()!);
+
+    print("Digite o nome da casa:");
+    String name = stdin.readLineSync()!;
+
+    print("Digite o preço da casa:");
+    double price = double.parse(stdin.readLineSync()!);
+
+    House casa = House(id, name, price);
+
+    casas.add(casa);
+  }
+
+  // Cascade notation para alterar o nome das casas
+  for (var casa in casas) {
+    casa..name = "${casa.name} (Cadastrada)";
+  }
+
+  print("\n===== CASAS CADASTRADAS =====");
+
+  // for-in para percorrer a lista
+  for (var casa in casas) {
+    print("ID: ${casa.id}");
+    print("Nome: ${casa.name}");
+    print("Preço: R\$ ${casa.price.toStringAsFixed(2)}");
+    print("----------------------------");
+  }
+}
