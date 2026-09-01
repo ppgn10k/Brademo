@@ -1,0 +1,53 @@
+class Laptop {
+  int id;
+  String nome;
+  int ram;
+  double clockCpu;
+
+  Laptop(this.id, this.nome, this.ram, this.clockCpu);
+
+  // Laptop para navegação na internet
+  Laptop.navegacao()
+      : id = 1,
+        nome = "Laptop Navegação",
+        ram = 4,
+        clockCpu = 2.0;
+
+  // Laptop para uso em escritório
+  Laptop.escritorio()
+      : id = 2,
+        nome = "Laptop Escritório",
+        ram = 8,
+        clockCpu = 2.5;
+
+  // Laptop para programação
+  Laptop.programacao()
+      : id = 3,
+        nome = "Laptop Programação",
+        ram = 16,
+        clockCpu = 3.2;
+}
+
+void main() {
+  Laptop laptopInternet = Laptop.navegacao();
+  Laptop laptopEscritorio = Laptop.escritorio();
+  Laptop laptopProgramacao = Laptop.programacao();
+
+  print("Laptop para navegação:");
+  print("ID: ${laptopInternet.id}");
+  print("Nome: ${laptopInternet.nome}");
+  print("RAM: ${laptopInternet.ram} GB");
+  print("CPU: ${laptopInternet.clockCpu} GHz");
+
+  print("\nLaptop para escritório:");
+  print("ID: ${laptopEscritorio.id}");
+  print("Nome: ${laptopEscritorio.nome}");
+  print("RAM: ${laptopEscritorio.ram} GB");
+  print("CPU: ${laptopEscritorio.clockCpu} GHz");
+
+  print("\nLaptop para programação:");
+  print("ID: ${laptopProgramacao.id}");
+  print("Nome: ${laptopProgramacao.nome}");
+  print("RAM: ${laptopProgramacao.ram} GB");
+  print("CPU: ${laptopProgramacao.clockCpu} GHz");
+}
