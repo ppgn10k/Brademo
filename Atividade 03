@@ -1,0 +1,32 @@
+class Laptop {
+  int id;
+  String nome;
+  int ram;
+  double clockCpu;
+
+  Laptop(this.id, this.nome, this.ram, this.clockCpu);
+}
+
+void main() {
+  Laptop laptop1 = Laptop(1, "Dell Inspiron", 8, 2.4);
+  Laptop laptop2 = Laptop(2, "Lenovo IdeaPad", 16, 3.0);
+  Laptop laptop3 = Laptop(3, "Acer Aspire", 8, 2.8);
+
+  print("Laptop 1:");
+  print("ID: ${laptop1.id}");
+  print("Nome: ${laptop1.nome}");
+  print("RAM: ${laptop1.ram} GB");
+  print("Clock CPU: ${laptop1.clockCpu} GHz");
+
+  print("\nLaptop 2:");
+  print("ID: ${laptop2.id}");
+  print("Nome: ${laptop2.nome}");
+  print("RAM: ${laptop2.ram} GB");
+  print("Clock CPU: ${laptop2.clockCpu} GHz");
+
+  print("\nLaptop 3:");
+  print("ID: ${laptop3.id}");
+  print("Nome: ${laptop3.nome}");
+  print("RAM: ${laptop3.ram} GB");
+  print("Clock CPU: ${laptop3.clockCpu} GHz");
+}
