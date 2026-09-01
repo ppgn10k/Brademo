@@ -1,0 +1,23 @@
+void main() {
+  // var permite inferir o tipo da variável na inicialização.
+  // Como nomeEquipamento recebe uma String, seu tipo será String.
+  var nomeEquipamento = "Impressora 3D";
+
+  // String define explicitamente que a variável é uma String.
+  // Por isso, não podemos atribuir um número inteiro a ela.
+  String local = "Lab de Protótipos";
+
+  // dynamic permite que a variável altere seu tipo durante a execução.
+  dynamic patrimonio = 12345;
+
+  // Agora patrimonio passa a armazenar uma String.
+  patrimonio = "12345-A";
+
+  print("Nome do equipamento: $nomeEquipamento");
+  print("Local: $local");
+  print("Patrimônio: $patrimonio");
+
+  print("Tipo do nome: ${nomeEquipamento is String}");
+  print("Tipo do local: ${local is String}");
+  print("Patrimônio é String: ${patrimonio is String}");
+}
